@@ -285,6 +285,9 @@ class Astrology
       when /The pain is too much/
         get_healed
         return observe(body)
+      when 'You see nothing regarding the future'
+        waitrt?
+        observe(body)
       when /open it/
         bput('open my telescope', 'extend your telescope')
         return observe(body)
